@@ -1,0 +1,45 @@
+{
+  "name": "Devin-Service-Comments",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "react-dev": "webpack -d  --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevinKrok/Devin-Service-Comments"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevinKrok/Devin-Service-Comments"
+  },
+  "homepage": "https://github.com/DevinKrok/Devin-Service-Comments#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bluebird": "^3.5.3",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "jquery": "^3.3.1",
+    "knex": "^0.16.3",
+    "mysql": "^2.16.0",
+    "nodemon": "^1.18.9",
+    "pg": "^7.7.1",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev": "^1.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.4"
+  }
+}
