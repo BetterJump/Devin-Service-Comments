@@ -9,7 +9,7 @@ CREATE TABLE comments_info (
     project_id integer,
     userName varchar(250),
     comment varchar(250),
-    times date
+    times timestamp default now()
 );
 
 

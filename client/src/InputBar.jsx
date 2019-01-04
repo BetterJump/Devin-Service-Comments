@@ -9,7 +9,7 @@ class InputBar extends React.Component {
     render(){
         return (
             <form>
-                <input onChange={this.props.onChange} type="text" name="firstname"/>
+                <textarea rows="6" cols="70" onChange={this.props.onChange} type="text" name="firstname"></textarea>
                 <button onClick={this.props.onClick}>Comment</button>
             </form>
         )
