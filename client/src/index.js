@@ -1,3 +1,3 @@
-import App from './App.jsx';
+import Comments from './App.jsx';
 
-window.App = App;
+window.Comments = Comments;

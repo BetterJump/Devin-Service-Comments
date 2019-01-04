@@ -6,7 +6,7 @@ import Comment from './Comment.jsx';
 import InputBar from './InputBar.jsx';
 import MoreCommentsButton from './MoreCommentsButton.jsx';
    
-class App extends React.Component{
+class Comments extends React.Component{
     constructor(props){
         super(props);
         this.state={
@@ -128,6 +128,6 @@ class App extends React.Component{
     }
 }
 
-// ReactDOM.render( <App/>,document.getElementById('App'));
+// ReactDOM.render( <Comments/>,document.getElementById('App'));
 
-export default App;
+export default Comments;
