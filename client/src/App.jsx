@@ -36,18 +36,20 @@ class Comments extends React.Component{
         });   
     }
 
-    componentDidUpdate(prevProp){
+    componentDidUpdate(prevProps){
         console.log('*****');
-        if(this.props.id !== prevProp.id ){
+        console.log(this.props.id);
+        if(this.props.id !== prevProps.id ){
             const self = this;
             axios.get('/Comments/:ID',{
                 params:{
-                    ID: self.state.currentProject_id
+                    ID: self.props.id
                 }
             })
             .then(function (response) {
             self.setState({
-                commentsList: response.data
+                commentsList: response.data,
+                currentProject_id: self.props.id
             })
             console.log(self.state);
             })
