@@ -1,8 +1,8 @@
-DROP DATABASE IF EXISTS commentstable;
+-- DROP DATABASE IF EXISTS commentstable;
 
-CREATE DATABASE commentstable;
+-- CREATE DATABASE commentstable;
 
-\c commentstable;
+-- \c commentstable;
 
 CREATE TABLE comments_info (
     id SERIAL,

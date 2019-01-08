@@ -1,3 +1,6 @@
+// if(process.env.NODE_ENV === 'production'){
+  require('dotenv').config();
+// }
 const express = require('express');
 const app = express();
 const port = 3001;
@@ -16,7 +19,7 @@ app.use(bodyParser.json())
 app.get('/Comments/:ID', (req, res) => {
   console.log('HERE');
 
-  knex.where('project_id',req.query.ID).select().from('comments_info')
+  knex.where('project_id',req.query.ID).select().from('comments_info').orderBy('times','desc')
   .then( (rows)=>{res.send(rows)})
   .catch( (err)=>{console.log(err)});
         
@@ -31,7 +34,7 @@ app.post('/Comments', (req, res) => {
   console.log('Pre-Knex');
   knex('comments_info').insert({project_id:currentProject_id,username:'TestUser',comment:newComment})
   .then( ()=>{
-    knex.where('project_id',currentProject_id).select().from('comments_info')
+    knex.where('project_id',currentProject_id).select().from('comments_info').orderBy('times','desc')
     .then( (rows)=>{res.send(rows)})
     .catch( (err)=>{console.log(err)});
   })

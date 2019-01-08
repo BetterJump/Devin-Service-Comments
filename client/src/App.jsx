@@ -5,6 +5,10 @@ import axios from 'axios';
 import Comment from './Comment.jsx';
 import InputBar from './InputBar.jsx';
 import MoreCommentsButton from './MoreCommentsButton.jsx';
+
+const buttonsStyling = {
+   
+}
    
 class Comments extends React.Component{
     constructor(props){
@@ -102,7 +106,7 @@ class Comments extends React.Component{
     if(this.state.commentsButtonClicked){
         const CommentsShown = this.state.commentsList.length; //all comments shown 
     } else {
-        const CommentsShown = Math.floor(this.state.commentsList.length*(0.4)); //40% of comments shown
+        const CommentsShown = Math.ceil(this.state.commentsList.length*(0.4)); //40% of comments shown
     }
 
         return (
@@ -111,7 +115,7 @@ class Comments extends React.Component{
                 <InputBar onChange={this.onChange.bind(this)} onClick={this.onClick.bind(this)}/>
             </div>
 
-            <div className="ouput">Comments:
+            <div className="ouput">
                 { (this.state.commentsButtonClicked)?
                     this.state.commentsList.slice(0,this.state.commentsList.length).map( (item)=>{
                         return <Comment commentObj={item}/>
